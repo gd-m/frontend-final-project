@@ -3,12 +3,13 @@ import thunk from 'redux-thunk'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
 import signupForm from './reducers/signupNewUser'
-
+import bookForm from './reducers/bookForm'
 
 const rootReducer = combineReducers({
     currentUser,
     loginForm,
-    signupForm
+    signupForm,
+    bookForm
   
 }) 
 
