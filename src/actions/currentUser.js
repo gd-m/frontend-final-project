@@ -1,6 +1,6 @@
 import {resetLoginForm} from './loginForm'
 
-export const login = (credentials) => {
+export const login = (credentials, history) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/login", {
             credentials: "include",
@@ -17,6 +17,7 @@ export const login = (credentials) => {
             } else {
                 dispatch(setCurrentUser(response.data))
                 dispatch(resetLoginForm())
+                history.push('/')
                 
             }
         })

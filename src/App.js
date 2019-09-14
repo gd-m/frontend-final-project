@@ -1,5 +1,7 @@
 
 import React, { Component } from 'react';
+import{Route, Switch} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 import Login from './components/Login'
 import {connect} from 'react-redux'
 import {getCurrentUser} from './actions/currentUser'
@@ -8,6 +10,7 @@ import BookCard from './components/BookCard'
 
 import Navbar from './components/Navbar'
 import FormContainer from './containers/FormContainer';
+import Signup from './components/Signup';
 
 class App extends Component {
 
@@ -30,9 +33,11 @@ class App extends Component {
    
     return ( 
       <div className="App">
-      <Navbar />
-      <FormContainer />
-      {books}
+        <Navbar />
+      <Switch>
+      <Route exact path="/signup" render={()=><Signup/>}/>
+      <Route path="/login" render={()=><Login />} />
+      </Switch>
       </div>
      );
   }
@@ -44,4 +49,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect (mapStateToProps, {getCurrentUser}) (App);
+export default withRouter(connect (mapStateToProps, {getCurrentUser}) (App))

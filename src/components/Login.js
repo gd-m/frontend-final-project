@@ -2,8 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {updateLoginForm} from '../actions/loginForm'
 import {login} from '../actions/currentUser'
+import {withRouter} from 'react-router-dom'
 
-const Login = ({updateLoginForm, login, loginForm}) => {
+const Login = ({updateLoginForm, login, loginForm, history}) => {
     const handleInputChange = event => {
         const {name, value} = event.target
         const updateInfo = {
@@ -16,7 +17,7 @@ const Login = ({updateLoginForm, login, loginForm}) => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        login(loginForm)
+        login(loginForm, history)
         
     }
 
@@ -38,4 +39,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {updateLoginForm, login}) (Login)
+export default withRouter(connect(mapStateToProps, {updateLoginForm, login}) (Login))
