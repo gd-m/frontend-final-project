@@ -1,3 +1,24 @@
 .navbar {
-    background-color: blue
+    background-color: #eeeeee;
+    display: flex;
+}
+
+.navbar-ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu {
+    display: flex;
+    margin-right: 3em
+}
+
+.brand-name {
+    margin-right: auto;
+}
+
+.navbar-li {
+    padding: 0 3em;
+    margin: 0 1em
 }

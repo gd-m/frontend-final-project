@@ -9,24 +9,26 @@ class Navbar extends Component {
         if(this.props.currentUser) {
             menu = (
                 <ul className="navbar-ul">
-                    <li className="navbar-li"><a href="/">Home</a></li>
-                    <li className="navbar-li"><a href="/books">Books</a></li>
-                    <li className="navbar-li"> <a href="/" onClick={this.props.logout}>logout</a></li>
+                    <li className="navbar-li li-home"><a href="/">Home</a></li>
+                    <li className="navbar-li li-books"><a href="/books">Books</a></li>
+                    <li className="navbar-li li-logout"> <a href="/" onClick={this.props.logout}>logout</a></li>
                 </ul>
            ) 
         } else {
           menu= ( 
               <ul className="navbar-ul">
-                  <li className="navbar-li"><a href="/login">Login</a></li>
-                  <li className="navbar-li"><a href="/signup">SignUp</a></li>
+                  <li className="navbar-li li-login"><a href="/login">Login</a></li><br/>
+                  <li className="navbar-li li-signup"><a href="/signup">SignUp</a></li>
               </ul> 
           )
         }
         
         return ( 
         <div className="navbar">
-            <div><a href="/">Notebook</a></div>
+            <div className="brand-name"><h3><a href="/">Notebook</a></h3></div>
+            <div className="navbar-menu">
             {menu}
+            </div>
         </div>
          );
     }
