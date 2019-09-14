@@ -9,9 +9,20 @@ class Navbar extends Component {
     render() {
         let menu 
         if(this.props.currentUser) {
-            menu = <a href="/" onClick={this.props.logout}>logout</a>
+            menu = (
+                <ul className="navbar-ul">
+                    <li className="navbar-li"><a href="/">Home</a></li>
+                    <li className="navbar-li"><a href="/books">Books</a></li>
+                    <li className="navbar-li"> <a href="/" onClick={this.props.logout}>logout</a></li>
+                </ul>
+           ) 
         } else {
-          menu=  <div><Login /><br></br> <Signup /></div>
+          menu= ( 
+              <ul className="navbar-ul">
+                  <li className="navbar-li"><a href="/login">Login</a></li>
+                  <li className="navbar-li"><a href="/signup">SignUp</a></li>
+              </ul> 
+          )
         }
         
         return ( 
