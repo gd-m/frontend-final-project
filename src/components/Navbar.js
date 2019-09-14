@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {logout} from '../actions/currentUser'
 import { connect } from 'react-redux'
-import Login from './Login'
 
-import Signup from './Signup'
 class Navbar extends Component {
 
     render() {
@@ -26,8 +24,8 @@ class Navbar extends Component {
         }
         
         return ( 
-        <div>
-            <div>Notebook</div>
+        <div className="navbar">
+            <div><a href="/">Notebook</a></div>
             {menu}
         </div>
          );
