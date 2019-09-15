@@ -84,27 +84,40 @@ form {
     margin: 1%;
 }
 
-input {
+input[type=text], [type=password] {
     padding: 1%;
     margin: 1%;
+    border: 1px solid #173f97;        
+    border-radius: 4px;
+
 }
 
 .submit-button {
-    background-color: rgb(29, 81, 253); 
-  border: 2px solid #e7e7e7;
+  border: 2px solid #173f97;
   color: white;
-  padding: 16px 32px;
+  padding:  1% 9%;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+ 
   font-size: 16px;
-  margin: 4px 2px;
+  
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 12px;
+  color: #173f97
 }
 
 .submit-button:hover {
-    background-color: #173f97
+    background-color: #173f97;
+    color: white;
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 14px;
+    color: #173f9756;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 14px;
+    color: #173f9757;
+  }

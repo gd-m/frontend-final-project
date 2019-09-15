@@ -28,11 +28,11 @@ class Signup extends Component {
             <div>
                 <h1>Sign Up </h1>
                 <form onSubmit={this.handleOnSubmit}>
-                    <input type="text" placeholder="first name" value={this.props.signupForm.first_name} name="first_name" onChange={this.handleOnChange} />
-                    <input type="text" placeholder="last name" value={this.props.signupForm.last_name} name="last_name" onChange={this.handleOnChange} />
-                    <input type="text" placeholder="username" value={this.props.signupForm.username} name="username" onChange={this.handleOnChange} />
-                    <input type="password" placeholder="password" value={this.props.signupForm.password} name="password" onChange={this.handleOnChange} />
-                    <input type="submit" value="Sign Up"  />
+                    <span>First Name: </span> <input type="text" placeholder="first name" value={this.props.signupForm.first_name} name="first_name" onChange={this.handleOnChange} /><br />
+                    <span>Last Name: </span> <input type="text" placeholder="last name" value={this.props.signupForm.last_name} name="last_name" onChange={this.handleOnChange} /><br />
+                    <span>Username: </span> <input type="text" placeholder="username" value={this.props.signupForm.username} name="username" onChange={this.handleOnChange} /><br />
+                    <span>Password: </span> <input type="password" placeholder="password" value={this.props.signupForm.password} name="password" onChange={this.handleOnChange} /><br />
+                    <input className="submit-button" type="submit" value="Sign Up"  />
                 </form>
             </div>
          );
