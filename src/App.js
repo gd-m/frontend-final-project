@@ -7,7 +7,8 @@ import {connect} from 'react-redux'
 import {getCurrentUser} from './actions/currentUser'
 import Logout from './components/Logout'
 import BookCard from './components/BookCard'
-
+import Welcome from './components/Welcome'
+import MainContainer from './components/MainContainer'
 import Navbar from './components/Navbar'
 import FormContainer from './containers/FormContainer';
 import Signup from './components/Signup';
@@ -36,8 +37,9 @@ class App extends Component {
         <Navbar />
         <div className="main">
       <Switch>
+      <Route exact path="/" render={() => (this.props.currentUser) ? <MainContainer /> : <Welcome />} />
       <Route exact path="/signup" render={()=><Signup/>}/>
-      <Route path="/login" render={()=><Login />} />
+      <Route exact path="/login" render={()=><Login />} />
       </Switch>
       </div>
         <Footer />
