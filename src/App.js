@@ -34,6 +34,7 @@ class App extends Component {
       <Route exact path="/signup" render={()=><Signup/>}/>
       <Route exact path="/login" render={()=><Login />} />
       <Route exact path="/books" render={()=><BooksContainer />}/>
+     
       </Switch>
       </div>
         <Footer />
@@ -42,6 +43,11 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return ({
+    currentUser: state.currentUser
+  })
+}
 
 
-export default withRouter(connect (null , {getCurrentUser}) (App))
+export default withRouter(connect (mapStateToProps , {getCurrentUser}) (App))
