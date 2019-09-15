@@ -25,7 +25,7 @@ class Navbar extends Component {
         
         return ( 
         <div className="navbar">
-            <div className="brand-name"><h3><a href="/">Notebook</a></h3></div>
+            <div className="brand-name"><h3><a href="/">NOTEBOOK</a></h3></div>
             <div className="navbar-menu">
             {menu}
             </div>

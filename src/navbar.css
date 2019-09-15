@@ -1,6 +1,28 @@
-.navbar {
-    background-color: #eeeeee;
+.App {
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+a:link, a:visited {
+    background-color: #2262eb;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+   
+  }
+  
+  a:hover, a:active {
+    background-color: #173f97;
+    color: whitesmoke;
+  }
+.navbar {
+    background-color: #2262eb;
+    display: flex;
+    color: white;
 }
 
 .navbar-ul {
@@ -16,9 +38,73 @@
 
 .brand-name {
     margin-right: auto;
+    margin-left: 1em;
+    padding: 0.3.em;
+    letter-spacing: 0.7em;
 }
 
 .navbar-li {
     padding: 0 3em;
     margin: 0 1em
+}
+
+.footer {
+    display: flex;
+    background-color: #2262eb;
+    color: white;
+    
+    
+}
+
+.footer p {
+    margin-left: 1em;
+}
+
+.main {
+    flex: 1;
+    padding: 10px ;
+    text-align: center;
+   
+}
+
+.main-container {
+    background-color: aliceblue;
+    width: 80%;
+    padding: 0.1px;
+    margin: auto;
+} 
+
+.main-container h1, form {
+    padding: 1em;
+    margin: auto
+}
+
+form {
+    padding: 1%;
+    margin: 1%;
+}
+
+input {
+    padding: 1%;
+    margin: 1%;
+}
+
+.submit-button {
+    background-color: rgb(29, 81, 253); 
+  border: 2px solid #e7e7e7;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.submit-button:hover {
+    background-color: #173f97
 }

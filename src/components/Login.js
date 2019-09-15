@@ -22,12 +22,12 @@ const Login = ({updateLoginForm, login, loginForm, history}) => {
     }
 
     return (
-        <div>
+        <div className="main-container">
             <h1>Login Page</h1> 
             <form onSubmit={handleSubmit} >
                 <span>Username:</span><input placeholder="username" type="text" value={loginForm.username} name="username" onChange={handleInputChange} /><br></br>
                 <span>Password:</span><input placeholder="password" type="text" value={loginForm.password} name="password" onChange={handleInputChange} /><br></br>
-                <input type="submit" value="Login" />
+                <input className="submit-button" type="submit" value="Login" />
             </form>
         </div>
     )

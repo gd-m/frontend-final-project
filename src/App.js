@@ -11,7 +11,7 @@ import BookCard from './components/BookCard'
 import Navbar from './components/Navbar'
 import FormContainer from './containers/FormContainer';
 import Signup from './components/Signup';
-
+import Footer from './components/Footer'
 class App extends Component {
 
   
@@ -34,10 +34,13 @@ class App extends Component {
     return ( 
       <div className="App">
         <Navbar />
+        <div className="main">
       <Switch>
       <Route exact path="/signup" render={()=><Signup/>}/>
       <Route path="/login" render={()=><Login />} />
       </Switch>
+      </div>
+        <Footer />
       </div>
      );
   }
