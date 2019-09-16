@@ -125,12 +125,13 @@ input[type=text], [type=password] {
   .book-container {
       display: flex;
       flex-direction: row-reverse;
-      justify-content: space-evenly;
+      justify-content: flex-end;
+      flex-wrap: wrap;
   }
 
   .book-card{
-      height: auto;
-      width: auto;
+      height: 150px;
+      width: 200px;
       border: 2px solid #173f97;
       text-align: center;
       padding: 1%;
@@ -141,4 +142,14 @@ input[type=text], [type=password] {
       border: #173f97;
       border-bottom: 1px solid;
       position: relative;
+  }
+
+  .book-links:link, .book-links:visited {
+    background-color: white;
+    color: #173f97;
+  }
+  
+  .book-links:hover, .book-links:active {
+    background-color: whitesmoke;
+    color: blue;
   }
