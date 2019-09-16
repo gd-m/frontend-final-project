@@ -9,7 +9,7 @@ class BooksContainer extends Component {
         if (this.props.currentUser) {
             books = this.props.currentUser.attributes.books.books.map(book => {
                 return (
-                    <BookCard books={book}/>
+                    <BookCard key={book.id} books={book}/>
                 )
             })
         }
