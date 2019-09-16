@@ -10,6 +10,7 @@ import MainContainer from './components/MainContainer'
 import Navbar from './components/Navbar'
 import Signup from './components/Signup';
 import Footer from './components/Footer'
+import Book from './components/Book'
 
 import BooksContainer from './components/BooksContainer'
 
@@ -31,9 +32,10 @@ class App extends Component {
         <div className="main">
       <Switch>
       <Route exact path="/" render={() => (this.props.currentUser) ? <MainContainer /> : <Welcome />} />
-      <Route exact path="/signup" render={()=><Signup/>}/>
-      <Route exact path="/login" render={()=><Login />} />
+      <Route path="/signup" render={()=><Signup/>}/>
+      <Route path="/login" render={()=><Login />} />
       <Route exact path="/books" render={()=><BooksContainer />}/>
+      <Route path="/books/:book_id" render={(props)=><Book {...props}/>}/>
      
       </Switch>
       </div>
