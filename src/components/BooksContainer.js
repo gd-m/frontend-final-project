@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BookCard from "./BookCard";
+import {withRouter} from 'react-router-dom'
 
 class BooksContainer extends Component {
+
    
     render() { 
         let books
@@ -15,7 +17,10 @@ class BooksContainer extends Component {
         }
         return ( 
             <div>
+                <div>
                 <h1>All Books</h1>
+                <a href="/books/new"><button className="submit-button">Add New Book</button></a> 
+                </div>
                 <div className="book-container">
                 {books}
                 </div>
@@ -30,4 +35,4 @@ const mapStateToProps = (state) => {
         currentUser: state.currentUser
     })
 }
-export default connect(mapStateToProps) (BooksContainer);
+export default withRouter(connect(mapStateToProps) (BooksContainer));

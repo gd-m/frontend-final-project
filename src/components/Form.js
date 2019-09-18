@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {updateBookForm} from '../actions/bookForm'
 import {newBook} from '../actions/newBook'
 
-const Form = ({updateBookForm, bookForm, newBook}) => {
+const Form = ({updateBookForm, bookForm, newBook, history}) => {
     const handleOnChange = event => {
         const {name, value} = event.target
         const updateInfo = {
@@ -16,7 +16,7 @@ const Form = ({updateBookForm, bookForm, newBook}) => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        newBook(bookForm)
+        newBook(bookForm, history)
         
     }
         return ( 
@@ -24,7 +24,7 @@ const Form = ({updateBookForm, bookForm, newBook}) => {
                 <form onSubmit={handleSubmit}>
                     <p>Title:<input type="text" onChange={handleOnChange} value={bookForm.title} name="title" /></p>
                     <p>Author:<input type="text" onChange={handleOnChange} value={bookForm.author} name="author" /></p>
-                    <input type="submit"/>
+                    <input className="submit-button" type="submit"/>
                 </form>
             </div>
          );

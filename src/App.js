@@ -11,6 +11,7 @@ import Navbar from './components/Navbar'
 import Signup from './components/Signup';
 import Footer from './components/Footer'
 import Book from './components/Book'
+import Form from './components/Form'
 
 import BooksContainer from './components/BooksContainer'
 
@@ -35,6 +36,7 @@ class App extends Component {
       <Route path="/signup" render={()=><Signup/>}/>
       <Route path="/login" render={()=><Login />} />
       <Route exact path="/books" render={()=><BooksContainer />}/>
+      <Route exact path="/books/new" component={Form} />
       <Route path="/books/:book_id" render={(props)=><Book {...props}/>}/>
      
       </Switch>
