@@ -1,5 +1,5 @@
 import {resetBookForm} from './bookForm'
-export const newBook = (data) => {
+export const newBook = (data, history) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/books", {
             credentials: "include",
@@ -13,6 +13,8 @@ export const newBook = (data) => {
     .then(res => {
         console.log(res)
         dispatch(resetBookForm())
+        history.push('/books')
+        window.location.reload()
     })
     }
 }
