@@ -4,12 +4,14 @@ import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
 import signupForm from './reducers/signupNewUser'
 import bookForm from './reducers/bookForm'
+import currentBook from './reducers/currentBook';
 
 const rootReducer = combineReducers({
     currentUser,
     loginForm,
     signupForm,
-    bookForm
+    bookForm,
+    currentBook
   
 }) 
 
